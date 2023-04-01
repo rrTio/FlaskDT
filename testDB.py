@@ -2,6 +2,8 @@ import sqlite3
 import datetime
 import time
 
+delay = 1
+
 def database(cur_time, cur_date):
     global conn, cursor
     conn = sqlite3.connect("DateTime.db")
@@ -16,10 +18,13 @@ def database(cur_time, cur_date):
         print("Insert successful")
 
 while True:
-    current_time = time.strftime("%H:%M:%S")
     current_date = datetime.date.today()
 
+    cur_time = time.strftime("%H:%M:%S")
     cur_date = ("{}-{}-{}".format(current_date.month, current_date.day, current_date.year))
-    print(current_time)
-    time.sleep(1) 
-    database(current_time, cur_date)
+
+    print(cur_time)
+    print(cur_date)
+    
+    database(cur_time, cur_date)
+    time.sleep(delay) 
