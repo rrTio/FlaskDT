@@ -17,7 +17,7 @@ def getusers():
 @app.route("/")
 def index():
   users = getusers()
-  return render_template("users.html", usr=users)
+  return render_template("index.html", usr=users)
 
 if __name__ == "__main__":
   app.run(HOST_NAME, HOST_PORT)

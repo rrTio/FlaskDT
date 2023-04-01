@@ -2,15 +2,17 @@
 <html>
   <head>
     <meta http-equiv="refresh" content="1" /> 
-    <title>Users List</title>
+    <title>Montanskopi</title>
     <link rel="stylesheet" href="static/S3_users.css"/>
   </head>
   <body>
     <center>
-      <h1>TEST APP</h1>
-      <p>HTML SQLITE PYTHON FLASK</p>
+      <h1>MONTANSKOPI</h1>
       <table id="demo" style="width:100%">
         <tr>
+          <th>Grade 1</th>
+          <th>Grade 2</th>
+          <th>Grade 3</th>
           <th>Current Date</th>
           <th>Current Time</th>
         </tr>
@@ -20,6 +22,9 @@
         <tr>
           <td>{{ u[0] }}</td>
           <td>{{ u[1] }}</td>
+          <td>{{ u[2] }}</td>
+          <td>{{ u[3] }}</td>
+          <td>{{ u[4] }}</td>
         </tr>
 
         {% endfor %}
