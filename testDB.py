@@ -2,7 +2,7 @@ import sqlite3
 import datetime
 import time
 
-delay = 1 #delay in seconds
+delay = 3 #delay in seconds
 
 def database(cur_time, cur_date): 
     global conn, cursor
@@ -22,7 +22,7 @@ while True:
     current = datetime.datetime.now() #instantiation of date and time
 
     cur_date = current.strftime("%m-%d-%Y") #current date formatting
-    cur_time = current.strftime("%H:%M:%S") #current time formatting
+    cur_time = current.strftime("%I:%M:%S %p") #current time formatting
 
     #printing date and time
     print("DATE AND TIME")
