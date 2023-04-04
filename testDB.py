@@ -18,13 +18,16 @@ def database(cur_time, cur_date):
         print("Insert successful")
 
 while True:
-    current_date = datetime.date.today()
 
-    cur_time = time.strftime("%H:%M:%S")
-    cur_date = ("{}-{}-{}".format(current_date.month, current_date.day, current_date.year))
+    current = datetime.datetime.now()
 
-    print(cur_time)
-    print(cur_date)
+    cur_date = current.strftime("%m-%d-%Y")
+    cur_time = current.strftime("%H:%M:%S")
+
+    print("DATE AND TIME")
+    print("DATE: ", cur_date)
+    print("TIME: ", cur_time)
+    print(" ")
     
     database(cur_time, cur_date)
     time.sleep(delay) 
